@@ -2,10 +2,13 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import Link from "@docusaurus/Link"
 import styles from './styles.module.css';
-import {FeatureItem, FeatureList} from "@site/src/config/features";
+import {FeatureItem, FeatureList} from "@site/config/features";
+import {Icons} from "@site/src/constants/icons";
 
 
-function Feature({title, Svg, description, path}: FeatureItem) {
+function Feature({title, svg, description, path}: FeatureItem) {
+		const Svg = Icons[svg];
+
 		return (
 				<Link to={path} className={clsx('col col--4', `${styles.featureContainer}`)}>
 						<div className="text--center ">
