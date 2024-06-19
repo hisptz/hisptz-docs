@@ -7,11 +7,13 @@
 
 .featureContainer {
     all: unset;
+    text-decoration: none;
     border: 1px solid transparent;
     padding: 1rem;
 }
 
 .featureContainer:focus {
+    text-decoration: unset;
     border: 1px solid #05a0fa;
     background-color: #05a0fa10;
 }
@@ -22,6 +24,7 @@
 }
 
 .featureContainer:hover {
+    text-decoration: unset;
     border: 1px solid #cbd5e1;
     cursor: pointer;
 }

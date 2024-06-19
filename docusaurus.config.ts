@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import {FeatureList} from "@site/src/config/features";
 
 const config: Config = {
 		title: 'Apps & Utilities',
@@ -39,25 +40,19 @@ const config: Config = {
 				// Replace with your project's social card
 				image: 'img/docusaurus-social-card.jpg',
 				navbar: {
-						title: '',
+						title: 'HISP Tanzania',
 						logo: {
 								alt: 'HISP Tanzania logo',
 								src: 'img/logo.png',
 						},
-						items: [
-								{
-										type: 'docSidebar',
-										sidebarId: 'tutorialSidebar',
+						items: FeatureList.map(({path, title,}) => {
+								return {
+										sidebarId: 'utils',
 										position: 'left',
-										label: 'Tutorial',
-								},
-								{to: '/blog', label: 'Blog', position: 'left'},
-								{
-										href: 'https://github.com/hisptz',
-										label: 'GitHub',
-										position: 'right',
-								},
-						],
+										label: 'Utilities & Functions',
+										to: path,
+								}
+						}),
 				},
 				footer: {
 						style: 'dark',
