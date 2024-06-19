@@ -1,0 +1,32 @@
+.features {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.featureContainer {
+    all: unset;
+    border: 1px solid transparent;
+    padding: 1rem;
+}
+
+.featureContainer:focus {
+    border: 1px solid #05a0fa;
+    background-color: #05a0fa10;
+}
+
+.featureContainer:hover [data-theme='dark'] {
+    border: 1px solid #cbd5e1;
+    background-color: unset !important;
+}
+
+.featureContainer:hover {
+    border: 1px solid #cbd5e1;
+    cursor: pointer;
+}
+
+.featureSvg {
+    height: 100px;
+    width: 100px;
+}
