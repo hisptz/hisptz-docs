@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "prestart": "bun docs-migrate.ts",
+    "start": "bun docs-migrate.ts && docusaurus start",
+    "build": " bun docs-migrate.ts && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -17,6 +18,7 @@
   },
   "dependencies": {
     "@docusaurus/core": "3.4.0",
+    "@docusaurus/plugin-content-docs": "^3.4.0",
     "@docusaurus/preset-classic": "3.4.0",
     "@mdx-js/react": "^3.0.1",
     "clsx": "^2.1.1",

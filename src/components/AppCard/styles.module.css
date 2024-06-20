@@ -2,6 +2,7 @@
 .appCard {
     border: 1px solid #dce5e9;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .appCard:hover {
@@ -26,6 +27,16 @@
 .title {
     color: black;
     margin: 0
+}
+
+[data-theme='dark'] {
+    .title {
+        color: white;
+    }
+
+    .description {
+        color: white;
+    }
 }
 
 

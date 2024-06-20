@@ -20,8 +20,9 @@ export default function Apps() {
 								</div>
 
 								<div style={{
-										display: "grid",
+										display: "flex",
 										gridTemplateColumns: "auto auto auto",
+										flexWrap: "wrap",
 										gap: 16,
 										padding: "32px 0"
 								}}>

@@ -24,13 +24,6 @@ export const FeatureList: FeatureItem[] = [
 				path: '/ui'
 		},
 		{
-				title: 'Analytics UI & Utilities',
-				id: 'analytics-tools',
-				svg: "analytics",
-				description: "Reusable analytics tools and UI components for visualizing DHIS2 analytics",
-				path: '/analytics-tools'
-		},
-		{
 				title: 'Apps',
 				id: 'apps',
 				svg: "apps",

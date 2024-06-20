@@ -1,6 +1,26 @@
 import {execSync} from "child_process";
 import fs from "fs-extra";
 
+
+interface MigrateConfig {
+		repo: string;
+		tempDir: string;
+		targetDir: string;
+		branch?: string;
+		extraFiles?: { from: string, to: string }[]
+		postDownloadActions?: string[]
+}
+
+const apps: MigrateConfig[] = [
+		{
+				repo: 'https://github.com/hisptz/program-indicator-disaggregator.git',
+				tempDir: '.pid-repo-temp',
+				targetDir: './docs/pid',
+				branch: 'develop',
+				extraFiles: []
+		}
+]
+
 const migrateDocs = ({
 												 repo,
 												 branch = 'master',
@@ -55,12 +75,11 @@ const migrateDocs = ({
 }
 
 
+apps.forEach((app) => {
+		migrateDocs(app);
+});
 
 
 
-migrateDocs({
-		repo: 'https://github.com/dhis2/cli.git',
-		tempDir: '.cli-repo-temp',
-		targetDir: './docs/cli/cli',
-})
+
 
