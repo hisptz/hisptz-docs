@@ -35,7 +35,7 @@ export default async function createConfigAsync(): Promise<Config> {
 				tagline: 'DHIS2 related apps and utilities documentation',
 				favicon: 'img/favicon.ico',
 				url: 'http://localhost:3000',
-				baseUrl: '/',
+				baseUrl: '/hisptz-docs/',
 				organizationName: 'hisptz', // Usually your GitHub org/user name.
 				projectName: 'hisptz-docs', // Usually your repo name.
 				onBrokenLinks: 'throw',

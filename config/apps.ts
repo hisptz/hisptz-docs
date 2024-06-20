@@ -6,7 +6,8 @@ export interface MigrationConfig {
 		targetDir: string;
 		branch?: string;
 		extraFiles?: { from: string, to: string }[]
-		postDownloadActions?: string[]
+		postDownloadActions?: string[],
+		docsDir?: string,
 }
 
 interface AppConfig {
@@ -49,7 +50,7 @@ export const apps: AppConfig[] = [
 				}
 		},
 		{
-				id: "random-data-generator",
+				id: "data-generator",
 				title: "Random Data Generator",
 				image: "randomDataGenerator",
 				description: "A tool to configure and generate a tracker program random data",
@@ -62,5 +63,17 @@ export const apps: AppConfig[] = [
 						extraFiles: []
 				}
 		},
+]
+
+export const libs =  [
+		{
+				migrationConfig: {
+						repo: 'https://github.com/hisptz/dhis2-utils.git',
+						tempDir: '.messenger-repo-temp',
+						targetDir: './docs/libs',
+						branch: 'develop',
+						extraFiles: []
+				}
+		}
 ]
 

@@ -1,6 +1,6 @@
 import {execSync} from "child_process";
 import fs from "fs-extra";
-import {apps, MigrationConfig} from "./config/apps"
+import {apps, libs, MigrationConfig} from "./config/apps"
 
 
 const migrateDocs = ({
@@ -10,6 +10,7 @@ const migrateDocs = ({
 												 targetDir,
 												 extraFiles = [],
 												 postDownloadActions = [],
+												 docsDir = 'docs'
 										 }: MigrationConfig) => {
 		try {
 				// Remove any previous copy
@@ -40,7 +41,7 @@ const migrateDocs = ({
 
 				// Copy the directory to another place and create missing directories
 				console.log(`copy files to ${targetDir}`)
-				fs.copySync(`${tempDir}/docs`, targetDir, {})
+				fs.copySync(`${tempDir}/${docsDir}`, targetDir, {})
 
 				// Copy extra files
 				extraFiles.forEach((file) => {
@@ -57,7 +58,7 @@ const migrateDocs = ({
 }
 
 
-apps.forEach((app) => {
+[...apps, ...libs].forEach((app) => {
 		migrateDocs(app.migrationConfig);
 });
 
