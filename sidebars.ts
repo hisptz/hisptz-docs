@@ -1,5 +1,7 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 import pidConfig from "./docs/pid/config.json"
+import analyticsMessengerConfig from "./docs/analytics-messenger/config.json"
+import dataGeneratorConfig from "./docs/data-generator/config.json"
 
 /**
  * Creating a sidebar enables you to:
@@ -12,7 +14,9 @@ import pidConfig from "./docs/pid/config.json"
  Create as many sidebars as you want.
  */
 const sidebars: SidebarsConfig = {
-		pid: pidConfig.sidebar
+		pid: pidConfig.sidebar,
+		analyticsMessenger: analyticsMessengerConfig.sidebar,
+		dataGenerator: dataGeneratorConfig.sidebar,
 };
 
 

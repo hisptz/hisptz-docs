@@ -1,25 +1,7 @@
 import {execSync} from "child_process";
 import fs from "fs-extra";
+import {apps, MigrationConfig} from "./config/apps"
 
-
-interface MigrateConfig {
-		repo: string;
-		tempDir: string;
-		targetDir: string;
-		branch?: string;
-		extraFiles?: { from: string, to: string }[]
-		postDownloadActions?: string[]
-}
-
-const apps: MigrateConfig[] = [
-		{
-				repo: 'https://github.com/hisptz/program-indicator-disaggregator.git',
-				tempDir: '.pid-repo-temp',
-				targetDir: './docs/pid',
-				branch: 'develop',
-				extraFiles: []
-		}
-]
 
 const migrateDocs = ({
 												 repo,
@@ -28,7 +10,7 @@ const migrateDocs = ({
 												 targetDir,
 												 extraFiles = [],
 												 postDownloadActions = [],
-										 }) => {
+										 }: MigrationConfig) => {
 		try {
 				// Remove any previous copy
 				fs.removeSync(tempDir)
@@ -76,7 +58,7 @@ const migrateDocs = ({
 
 
 apps.forEach((app) => {
-		migrateDocs(app);
+		migrateDocs(app.migrationConfig);
 });
 
 

@@ -13,7 +13,7 @@ export interface AppCardProps {
 export function AppCard({title, image, description, version, id}: AppCardProps): JSX.Element {
 
 		return (
-				<Link className={styles.appCard} to={`/docs/${id}`}>
+				<Link className={styles.appCard} to={`/docs/${id}/intro`}>
 						<div style={{
 								display: "flex",
 								flexDirection: "row",
