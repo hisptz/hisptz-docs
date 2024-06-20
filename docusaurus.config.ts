@@ -15,6 +15,14 @@ export default async function createConfigAsync(): Promise<Config> {
 				}
 		});
 
+		const footerLinks = FeatureList.map(({path, title}) => {
+
+				return {
+						label: title,
+						to: path
+				}
+		})
+
 		navItems.push({
 				href: 'https://github.com/hisptz',
 				label: 'GitHub',
@@ -38,9 +46,13 @@ export default async function createConfigAsync(): Promise<Config> {
 				},
 				presets: [
 						[
-								'classic',
+								'@docusaurus/preset-classic',
 								{
 										docs: {
+												path: "docs",
+												breadcrumbs: true,
+												routeBasePath: 'docs',
+												include: ['**/*.md', '**/*.mdx'],
 												sidebarPath: './sidebars.ts',
 										},
 										blog: {
@@ -71,16 +83,7 @@ export default async function createConfigAsync(): Promise<Config> {
 								links: [
 										{
 												title: 'Docs',
-												items: [
-														{
-																label: 'DHIS2 Utilities',
-																to: '/intro',
-														},
-														{
-																label: 'UI Components',
-																to: 'pathname:///ui/index.html',
-														},
-												],
+												items: footerLinks,
 										},
 										{
 												title: 'Community',
