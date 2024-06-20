@@ -79,7 +79,7 @@ export default async function createConfigAsync(): Promise<Config> {
 								items: navItems,
 						},
 						footer: {
-								style: 'dark',
+								style: 'light',
 								links: [
 										{
 												title: 'Docs',
@@ -101,10 +101,6 @@ export default async function createConfigAsync(): Promise<Config> {
 										{
 												title: 'More',
 												items: [
-														// {
-														//     label: 'Blog',
-														//     to: '/blog',
-														// },
 														{
 																label: 'GitHub',
 																href: 'https://github.com/hisptz',
