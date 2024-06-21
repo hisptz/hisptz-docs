@@ -30,12 +30,12 @@ export const FeatureList: FeatureItem[] = [
 				description: "Custom, open source DHIS2 applications",
 				path: '/apps'
 		},
-		// {
-		// 		title: 'Flutter Tools',
-		// 		id: 'flutter-tools',
-		// 		svg: "flutterTools",
-		// 		description: "UI,utilities and tools for flutter development",
-		// 		path: '/docs/flutter-tools'
-		// },
+		{
+				title: 'Flutter Tools',
+				id: 'flutter-tools',
+				svg: "flutterTools",
+				description: "UI,utilities and tools for flutter development",
+				path: '/docs/flutter-tools/intro'
+		},
 
 ];

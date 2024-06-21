@@ -74,6 +74,15 @@ export const libs =  [
 						branch: 'develop',
 						extraFiles: []
 				}
+		},
+		{
+				migrationConfig: {
+						repo: 'https://github.com/hisptz/dhis2-flutter-toolkit.git',
+						tempDir: '.flutter-toolkit-repo-temp',
+						targetDir: './docs/flutter-tools',
+						branch: 'develop',
+						extraFiles: []
+				}
 		}
 ]
 

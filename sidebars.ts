@@ -4,6 +4,7 @@ import analyticsMessengerConfig from "./docs/analytics-messenger/config.json"
 import dataGeneratorConfig from "./docs/data-generator/config.json";
 import uiConfig from "./docs/libs/ui/config.json"
 import utilsConfig from "./docs/libs/utils/config.json"
+import flutterToolsConfig from "./docs/flutter-tools/config.json"
 
 /**
  * Creating a sidebar enables you to:
@@ -21,6 +22,7 @@ const sidebars: SidebarsConfig = {
 		dataGenerator: dataGeneratorConfig.sidebar,
 		uiConfig: uiConfig.sidebar,
 		utilsConfig: utilsConfig.sidebar,
+		flutterToolsConfig: flutterToolsConfig.sidebar,
 };
 
 
